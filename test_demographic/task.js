@@ -1,7 +1,6 @@
-/* デモ用のストループ課題 */
 /*demographic*/
 var demographic = {
-  type: 'survey-multi-choice',
+  type: jsPsychSurveyMultiChoice,
   questions: [
     {
       prompt: "あなたの性別を教えて下さい", 
@@ -19,12 +18,5 @@ var demographic = {
   button_label: "次へ",
 };
 
-
-/*デブリーフィング*/
-var debrief = {
-type: "html-keyboard-response",
-stimulus: "<p style='text-align:left'>質問は以上です。キーボードのキーをどれか押すと終わります。</p>",
-};
-
 /*タイムラインの設定*/
-var timeline = [fullscreen,demographic,debrief];
+var timeline = [fullscreen,demographic];
