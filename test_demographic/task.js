@@ -1,22 +1,31 @@
 /*demographic*/
-var demographic = {
-  type: jsPsychSurveyMultiChoice,
-  questions: [
-    {
-      prompt: "あなたの性別を教えて下さい", 
-      name: 'gender', 
-      options: ['男性', '女性', 'その他', '回答しない'], 
-      required: true
-    }, 
-    {
-      prompt: "あなたは心理学者ですか？", 
-      name: 'psychologist', 
-      options: ['はい', 'いいえ'], 
-      required: false
-    }
+const demographic = {
+  type: jsPsychSurvey,
+  pages: [
+    [ 
+      {
+        type: 'text',
+        prompt: "年齢を数字（半角）で記入ください。", 
+        name: '年齢', 
+        textbox_columns: 5,
+        required: false,
+      },{
+        type: 'multi-choice',
+        prompt: "性別について以下から選択してください。", 
+        options: ['女性','男性','その他','回答しない'],
+        columns: 1,
+        name: 'gender', 
+      }
+    ]
   ],
-  button_label: "次へ",
+  title: '以下の質問に回答ください。',
+  button_label_next: '次へ',
+  button_label_back: '前へ',
+  button_label_finish: '次へ',
+  show_question_numbers: 'onPage'
 };
+
+
 
 /*タイムラインの設定*/
 var timeline = [fullscreen,demographic];
