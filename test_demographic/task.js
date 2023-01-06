@@ -28,4 +28,4 @@ const demographic = {
 
 
 /*タイムラインの設定*/
-var timeline = [fullscreen,demographic];
+var timeline = [demographic];
